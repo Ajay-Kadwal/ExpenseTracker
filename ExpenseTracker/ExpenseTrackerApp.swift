@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct ExpenseTrackerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Onboarding_Screen()
+                .modelContainer(for: [Expense.self])
+//                .modelContainer(for: [Note.self])
         }
     }
 }
